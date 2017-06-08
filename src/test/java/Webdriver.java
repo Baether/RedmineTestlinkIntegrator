@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.luaj.vm2.*;
+import org.luaj.vm2.lib.jse.*;
+import javax.swing.*;
 
 public class Webdriver {
 	static final String PASSWORD = System.getenv("TRpassword");
@@ -16,7 +19,7 @@ public class Webdriver {
 	static final String[] RELEASE = 	{"Release_36.3", "Release_36.3_-_Homologação"};
 	static final String ISSUES = "//a[contains(@class, 'issue tracker')]";
 	static final String QADOC = "//td[contains(text(),'Q.A. Doc')]/";//*[contains(text(),'match')]
-	
+
 	public void login(WebDriver driver){
 		driver.findElement(By.className("login")).click();
 		WebElement input = driver.findElement(By.name("username"));
@@ -25,9 +28,10 @@ public class Webdriver {
 		input.sendKeys(PASSWORD);
 		input.submit();
 	}
+
 	@Test
 	public void createTestPlan() {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Felicio/Downloads/chromedriver_win32/chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "C:/Users/Felicio/Downloads/chromedriver_win32/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		//faz o webdriver esperar pelo menos 3 segundos antes de dar timeout caso nao ache o elemento
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -58,8 +62,8 @@ public class Webdriver {
 				if (i == issues.size()) i = -1;
 
 			} while (i != -1);
-		}
-		
+		}*/
+
 		
 	}
 }
