@@ -18,7 +18,10 @@ public class Webdriver {
 	static final String USERNAME = System.getenv("TRuser");
 	static final String[] RELEASE = 	{"Release_36.3", "Release_36.3_-_Homologação"};
 	static final String ISSUES = "//a[contains(@class, 'issue tracker')]";
-	static final String QADOC = "//td[contains(text(),'Q.A. Doc')]/";//*[contains(text(),'match')]
+	static final String QADOC = "//td[contains(text(), 'Doc')]/a";
+	static final String EVO = "//div[@class, 'wiki']/p";
+	//static Globals globals = JsePlatform.standardGlobals();   "//*[contains(text(),'Doc')]/"
+
 
 	public void login(WebDriver driver){
 		driver.findElement(By.className("login")).click();
@@ -33,10 +36,8 @@ public class Webdriver {
 	public void createTestPlan() {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Felicio/Downloads/chromedriver_win32/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		//faz o webdriver esperar pelo menos 3 segundos antes de dar timeout caso nao ache o elemento
+		//faz o webdriver esperar pelo menos 2 segundos antes de dar timeout caso nao ache o elemento
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-		System.out.println("voce comitou com sucesso pelo intellij e adicionou o foreach");
 
 		for (String release : RELEASE ) {
 			driver.get("http://redmine.ss.local/projects/evoluservices/roadmap/");
@@ -50,8 +51,15 @@ public class Webdriver {
 				issues.get(i).click();
 				if(!type.toLowerCase().contains("Bug".toLowerCase())) {
 					try {
-						driver.findElement(By.xpath(QADOC));
-						System.out.println("QAdoc" + i);
+						driver.findElement(By.xpath(QADOC)).click();
+						try {
+							List<WebElement> evos = driver.findElements(By.xpath(EVO));
+							System.out.println(evos.get(0));
+						}
+						catch(NoSuchElementException e){
+
+						}
+
 						driver.navigate().back();
 					} catch (NoSuchElementException e) {
 						System.out.println("Issues sem Q.A. Doc");
