@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="Commit inserindo luaj no projeto">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/Webdriver.class" afterPath="" />
+    <list default="true" id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Webdriver.class" afterPath="$PROJECT_DIR$/target/test-classes/Webdriver.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Webdriver.java" afterPath="$PROJECT_DIR$/src/test/java/Webdriver.java" />
     </list>
     <ignored path="selenium-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -694,7 +693,7 @@
       <workItem from="1496944383601" duration="1308000" />
       <workItem from="1497297996735" duration="6686000" />
       <workItem from="1497381024951" duration="6622000" />
-      <workItem from="1497460241373" duration="9850000" />
+      <workItem from="1497460241373" duration="9860000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inserindo luaj no projeto">
       <created>1496888089083</created>
@@ -717,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497305469969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit inserindo luaj no projeto">
+      <created>1497475951610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1497475951610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -753,7 +759,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38971000" />
+    <option name="totallyTimeSpent" value="38981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="0" />
